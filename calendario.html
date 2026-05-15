@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIDANTA · Calendario de Eventos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-mark"></div>
+      <div class="sidebar-logo-text">
+        <span class="sidebar-logo-name">VIDANTA</span>
+        <span class="sidebar-logo-sub">Sistema Gastronómico</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+
+      <span class="sidebar-section-label">Principal</span>
+
+      <a href="index.html" class="sidebar-nav-item">Dashboard</a>
+
+      <a href="stock.html" class="sidebar-nav-item">
+        Control de Stock
+        <span class="nav-badge danger">3</span>
+      </a>
+
+      <a href="perfil.html" class="sidebar-nav-item">Perfil</a>
+
+      <a href="configuracion.html" class="sidebar-nav-item">Configuración</a>
+
+      <span class="sidebar-section-label">Operaciones</span>
+
+      <a href="calendario.html" class="sidebar-nav-item active">Calendario</a>
+      <a href="reservas.html" class="sidebar-nav-item">Reservas</a>
+      <a href="historial.html" class="sidebar-nav-item">Historial</a>
+      <a href="catalogo.html" class="sidebar-nav-item">Catálogo</a>
+
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">M</div>
+        <div class="sidebar-user-info">
+          <div class="sidebar-user-name">Martín Echevarría</div>
+          <div class="sidebar-user-role">Gerente General</div>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+
+  <div class="main-wrapper">
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="module-name">Calendario de Eventos</div>
+        <div class="breadcrumb">VIDANTA · <span>Operaciones</span> · Calendario</div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-search">🔍 Buscar evento...</div>
+        <div class="topbar-badge">● Activo</div>
+      </div>
+    </header>
+
+    <div class="page-content">
+      <div class="page-header">
+        <h1>Agenda Gastronómica</h1>
+        <p>Gestioná eventos, cenas especiales y experiencias exclusivas del restaurante.</p>
+        <div class="gold-line"></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 380px;gap:24px;align-items:start;">
+
+        <div>
+          <div class="cal-wrapper">
+            <div class="cal-topbar">
+              <button class="cal-nav-btn" id="prev-month">&#8592;</button>
+              <h2 class="cal-month-title" id="cal-title">Mayo 2025</h2>
+              <button class="cal-nav-btn" id="next-month">&#8594;</button>
+            </div>
+            <div class="cal-days-header">
+              <span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span>
+            </div>
+            <div class="cal-grid" id="cal-grid"></div>
+          </div>
+          <div style="display:flex;gap:20px;margin-top:16px;padding:0 4px;">
+            <div style="display:flex;align-items:center;gap:7px;font-size:12px;color:var(--text-secondary);">
+              <span style="width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--wood));display:inline-block;"></span>
+              Evento programado
+            </div>
+            <div style="display:flex;align-items:center;gap:7px;font-size:12px;color:var(--text-secondary);">
+              <span style="width:12px;height:12px;border-radius:50%;background:var(--green-dark);border:1.5px solid var(--gold);display:inline-block;"></span>
+              Hoy
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card" style="padding:24px;">
+            <div class="section-title" style="font-size:13px;margin-bottom:18px;">Próximos Eventos</div>
+
+            <div class="event-item">
+              <div class="event-date-chip"><div class="day">2</div><div class="mon">MAY</div></div>
+              <div class="event-body">
+                <div class="event-name">Cena Maridaje Patagónico</div>
+                <div class="event-meta">20:30 h · Salón principal · 40 cubiertos</div>
+                <div class="event-actions">
+                  <span class="badge badge-gold">Maridaje</span>
+                  <a href="reservas.html" class="btn btn-primary btn-sm">Reservar</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-date-chip"><div class="day">10</div><div class="mon">MAY</div></div>
+              <div class="event-body">
+                <div class="event-name">Masterclass: Arte del Cuchillo</div>
+                <div class="event-meta">11:00 h · Cocina abierta · 12 lugares</div>
+                <div class="event-actions">
+                  <span class="badge badge-green">Taller</span>
+                  <a href="reservas.html" class="btn btn-secondary btn-sm">Reservar</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-date-chip"><div class="day">17</div><div class="mon">MAY</div></div>
+              <div class="event-body">
+                <div class="event-name">Noche de Quesos Artesanales</div>
+                <div class="event-meta">19:00 h · Bodega · 20 cubiertos</div>
+                <div class="event-actions">
+                  <span class="badge badge-warn">Degustación</span>
+                  <a href="reservas.html" class="btn btn-secondary btn-sm">Reservar</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-date-chip"><div class="day">24</div><div class="mon">MAY</div></div>
+              <div class="event-body">
+                <div class="event-name">Cena Omakase · Temporada Otoño</div>
+                <div class="event-meta">20:00 h · Mesa del chef · 8 comensales</div>
+                <div class="event-actions">
+                  <span class="badge badge-gold">Exclusivo</span>
+                  <a href="reservas.html" class="btn btn-primary btn-sm">Reservar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mt-16" style="padding:20px;">
+            <div style="font-size:13px;font-weight:600;color:var(--text-main);margin-bottom:14px;">+ Crear nuevo evento</div>
+            <div class="form-group">
+              <label class="form-label">Nombre del evento</label>
+              <input type="text" class="form-control" placeholder="Ej: Cena especial de temporada..." />
+            </div>
+            <div class="form-row">
+              <div class="form-group" style="margin-bottom:0">
+                <label class="form-label">Fecha</label>
+                <input type="date" class="form-control" />
+              </div>
+              <div class="form-group" style="margin-bottom:0">
+                <label class="form-label">Horario</label>
+                <input type="time" class="form-control" />
+              </div>
+            </div>
+            <button class="btn btn-primary" style="width:100%;margin-top:16px;justify-content:center;">Agregar Evento</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="footer-bar">
+      <span class="footer-brand">VIDANTA</span>
+      <span>© 2025 · Sistema de Gestión Gastronómica</span>
+    </footer>
+  </div>
+
+  <script>
+    const months=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+    const eventDays={'2025-4':[2,10,17,24]};
+    let cur=new Date(2025,4,1);
+    function render(){
+      const grid=document.getElementById('cal-grid');
+      const title=document.getElementById('cal-title');
+      const key=cur.getFullYear()+'-'+cur.getMonth();
+      title.textContent=months[cur.getMonth()]+' '+cur.getFullYear();
+      const firstDay=new Date(cur.getFullYear(),cur.getMonth(),1).getDay();
+      const offset=firstDay===0?6:firstDay-1;
+      const total=new Date(cur.getFullYear(),cur.getMonth()+1,0).getDate();
+      const today=new Date();
+      const marked=eventDays[key]||[];
+      grid.innerHTML='';
+      for(let i=0;i<offset;i++){const d=document.createElement('div');d.className='cal-day empty';grid.appendChild(d);}
+      for(let d=1;d<=total;d++){
+        const cell=document.createElement('div');cell.className='cal-day';cell.textContent=d;
+        if(cur.getMonth()===today.getMonth()&&cur.getFullYear()===today.getFullYear()&&d===today.getDate())cell.classList.add('today');
+        if(marked.includes(d))cell.classList.add('has-event');
+        grid.appendChild(cell);
+      }
+    }
+    document.getElementById('prev-month').onclick=()=>{cur.setMonth(cur.getMonth()-1);render();};
+    document.getElementById('next-month').onclick=()=>{cur.setMonth(cur.getMonth()+1);render();};
+    render();
+  </script>
+</body>
+</html>
