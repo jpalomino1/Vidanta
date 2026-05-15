@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIDANTA - Catálogo Gastronómico</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="sidebar-logo-icon">
+                V
+            </div>
+
+            <div class="sidebar-logo-text">
+                <span class="sidebar-logo-name">
+                    VIDANTA
+                </span>
+
+                <span class="sidebar-logo-sub">
+                    Sistema Gastronómico
+                </span>
+            </div>
+
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <span class="sidebar-section-label">
+                Principal
+            </span>
+
+            <a href="index.html" class="sidebar-nav-item">
+                Dashboard
+            </a>
+
+            <a href="stock.html" class="sidebar-nav-item">
+                Control de Stock
+
+                <span class="nav-badge danger">
+                    3
+                </span>
+            </a>
+
+            <a href="perfil.html" class="sidebar-nav-item">
+                Perfil
+            </a>
+
+            <a href="configuracion.html" class="sidebar-nav-item">
+                Configuración
+            </a>
+
+            <span class="sidebar-section-label">
+                Operaciones
+            </span>
+
+            <a href="calendario.html" class="sidebar-nav-item">
+                Calendario
+            </a>
+
+            <a href="reservas.html" class="sidebar-nav-item">
+                Reservas
+            </a>
+
+            <a href="historial.html" class="sidebar-nav-item">
+                Historial
+            </a>
+
+            <a href="catalogo.html" class="sidebar-nav-item active">
+                Catálogo
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-user">
+
+                <div class="sidebar-avatar">
+                    M
+                </div>
+
+                <div class="sidebar-user-info">
+
+                    <div class="sidebar-user-name">
+                        Martín Echevarría
+                    </div>
+
+                    <div class="sidebar-user-role">
+                        Gerente General
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <div class="main-wrapper">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div class="topbar-title">
+                Catálogo Gastronómico
+            </div>
+
+            <div class="topbar-actions">
+
+                <input 
+                    type="text" 
+                    class="topbar-search"
+                    placeholder="Buscar producto..."
+                >
+
+                <button class="topbar-btn-icon">
+                    Filtrar
+                </button>
+
+                <div class="topbar-avatar">
+                    M
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- CONTENT -->
+        <main class="page-content">
+
+            <!-- PAGE HEADER -->
+            <div class="page-header">
+
+                <div>
+
+                    <div class="page-header-eyebrow">
+                        Operaciones
+                    </div>
+
+                    <h1 class="page-header-title">
+                        Catálogo gastronómico
+                    </h1>
+
+                    <p class="page-header-subtitle">
+                        Gestión de platos y productos activos
+                    </p>
+
+                </div>
+
+                <div class="page-header-actions">
+
+                    <button class="btn btn-secondary">
+                        Categorías
+                    </button>
+
+                    <button class="btn btn-primary">
+                        + Nuevo Producto
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- FILTER CARD -->
+            <div class="card animate-fade" style="margin-bottom: 24px;">
+
+                <div class="alert-title" style="margin-bottom: 16px;">
+                    Buscar e indexar elementos
+                </div>
+
+                <div style="
+                    display:grid;
+                    grid-template-columns: 2fr 1fr 1fr auto;
+                    gap:16px;
+                    align-items:end;
+                ">
+
+                    <div>
+                        <label style="font-size: 12px; color: var(--text-secondary);">
+                            Producto
+                        </label>
+
+                        <input 
+                            type="text"
+                            class="topbar-search"
+                            placeholder="Ej. Pulpo braseado..."
+                            style="width:100%; margin-top:6px;"
+                        >
+                    </div>
+
+                    <div>
+                        <label style="font-size: 12px; color: var(--text-secondary);">
+                            Ordenar
+                        </label>
+
+                        <select class="topbar-search" style="width:100%; margin-top:6px;">
+                            <option>Más vendidos</option>
+                            <option>Precio mayor</option>
+                            <option>Precio menor</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label style="font-size: 12px; color: var(--text-secondary);">
+                            Estado
+                        </label>
+
+                        <select class="topbar-search" style="width:100%; margin-top:6px;">
+                            <option>Todos</option>
+                            <option>Disponible</option>
+                            <option>Agotado</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-primary">
+                        Buscar
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCTS -->
+            <div style="
+                display:grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap:24px;
+            ">
+
+                <!-- PRODUCT -->
+                <div class="card animate-fade">
+
+                    <div style="
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                        margin-bottom:16px;
+                    ">
+
+                        <span style="
+                            font-size:11px;
+                            color:var(--gold);
+                            text-transform:uppercase;
+                            letter-spacing:1px;
+                        ">
+                            Chef's Choice
+                        </span>
+
+                        <span style="
+                            color:var(--success);
+                            font-size:12px;
+                        ">
+                            Disponible
+                        </span>
+
+                    </div>
+
+                    <div style="
+                        height:140px;
+                        border-radius:16px;
+                        background:linear-gradient(
+                            135deg,
+                            var(--green-dark),
+                            var(--bg-secondary)
+                        );
+                        margin-bottom:18px;
+                    "></div>
+
+                    <div style="
+                        font-size:12px;
+                        color:var(--gold);
+                        margin-bottom:6px;
+                    ">
+                        Platos Fuertes
+                    </div>
+
+                    <h3 style="
+                        margin-bottom:10px;
+                        font-size:20px;
+                    ">
+                        Lomo Premium
+                    </h3>
+
+                    <p style="
+                        color:var(--text-secondary);
+                        font-size:14px;
+                        line-height:1.6;
+                        margin-bottom:18px;
+                    ">
+                        Lomo con costra de café y puré rústico trufado.
+                    </p>
+
+                    <div style="
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                    ">
+
+                        <span style="
+                            color:var(--gold);
+                            font-size:20px;
+                            font-weight:600;
+                        ">
+                            $24,500
+                        </span>
+
+                        <button class="btn btn-ghost">
+                            Editar
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- PRODUCT -->
+                <div class="card animate-fade">
+
+                    <div style="
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                        margin-bottom:16px;
+                    ">
+
+                        <span style="
+                            font-size:11px;
+                            color:var(--gold);
+                            text-transform:uppercase;
+                        ">
+                            Más Vendido
+                        </span>
+
+                        <span style="
+                            color:var(--success);
+                            font-size:12px;
+                        ">
+                            Disponible
+                        </span>
+
+                    </div>
+
+                    <div style="
+                        height:140px;
+                        border-radius:16px;
+                        background:linear-gradient(
+                            135deg,
+                            var(--wood),
+                            var(--bg-secondary)
+                        );
+                        margin-bottom:18px;
+                    "></div>
+
+                    <div style="
+                        font-size:12px;
+                        color:var(--gold);
+                        margin-bottom:6px;
+                    ">
+                        Mariscos
+                    </div>
+
+                    <h3 style="
+                        margin-bottom:10px;
+                        font-size:20px;
+                    ">
+                        Pulpo Braseado
+                    </h3>
+
+                    <p style="
+                        color:var(--text-secondary);
+                        font-size:14px;
+                        line-height:1.6;
+                        margin-bottom:18px;
+                    ">
+                        Pulpo a las brasas con emulsión de mango.
+                    </p>
+
+                    <div style="
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                    ">
+
+                        <span style="
+                            color:var(--gold);
+                            font-size:20px;
+                            font-weight:600;
+                        ">
+                            $28,000
+                        </span>
+
+                        <button class="btn btn-ghost">
+                            Editar
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- PRODUCT -->
+                <div class="card animate-fade">
+
+                    <div style="
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                        margin-bottom:16px;
+                    ">
+
+                        <span style="
+                            font-size:11px;
+                            color:var(--gold);
+                            text-transform:uppercase;
+                        ">
+                            Nuevo
+                        </span>
+
+                        <span style="
+                            color:var(--danger);
+                            font-size:12px;
+                        ">
+                            Agotado
+                        </span>
+
+                    </div>
+
+                    <div style="
+                        height:140px;
+                        border-radius:16px;
+                        background:linear-gradient(
+                            135deg,
+                            var(--danger),
+                            var(--bg-secondary)
+                        );
+                        margin-bottom:18px;
+                    "></div>
+
+                    <div style="
+                        font-size:12px;
+                        color:var(--gold);
+                        margin-bottom:6px;
+                    ">
+                        Coctelería
+                    </div>
+
+                    <h3 style="
+                        margin-bottom:10px;
+                        font-size:20px;
+                    ">
+                        Luxury Elixir
+                    </h3>
+
+                    <p style="
+                        color:var(--text-secondary);
+                        font-size:14px;
+                        line-height:1.6;
+                        margin-bottom:18px;
+                    ">
+                        Mezcal premium con maracuyá ahumado.
+                    </p>
+
+                    <div style="
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                    ">
+
+                        <span style="
+                            color:var(--gold);
+                            font-size:20px;
+                            font-weight:600;
+                        ">
+                            $9,500
+                        </span>
+
+                        <button class="btn btn-ghost">
+                            Editar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+</body>
+</html>
