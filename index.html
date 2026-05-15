@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIDANTA — Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<div class="app-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-text">
+        <span class="sidebar-logo-name">VIDANTA</span>
+        <span class="sidebar-logo-sub">Gastronómico</span>
+      </div>
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+      <span class="sidebar-section-label">Principal</span>
+
+      <a href="index.html" class="sidebar-nav-item active">
+        Dashboard
+      </a>
+
+      <a href="stock.html" class="sidebar-nav-item">
+        Control de Stock
+        <span class="nav-badge danger">3</span>
+      </a>
+
+      <a href="perfil.html" class="sidebar-nav-item">
+        Perfil
+      </a>
+
+      <a href="configuracion.html" class="sidebar-nav-item">
+        Configuración
+      </a>
+
+      <span class="sidebar-section-label">Operaciones</span>
+
+      <a href="calendario.html" class="sidebar-nav-item">
+        Calendario
+        <span class="nav-badge">5</span>
+      </a>
+
+      <a href="reservas.html" class="sidebar-nav-item">
+        Reservas
+      </a>
+
+      <a href="historial.html" class="sidebar-nav-item">
+        Historial
+      </a>
+
+      <a href="catalogo.html" class="sidebar-nav-item">
+        Catálogo
+      </a>
+
+    </nav>
+
+    <div class="sidebar-footer">
+
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">M</div>
+
+        <div class="sidebar-user-info">
+          <div class="sidebar-user-name">Martín Echevarría</div>
+          <div class="sidebar-user-role">Gerente General</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main-wrapper">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+
+      <div class="topbar-breadcrumb">
+        <span>VIDANTA</span>
+        <span class="topbar-breadcrumb-sep">/</span>
+        <span>Dashboard</span>
+      </div>
+
+      <div class="topbar-title">
+        Dashboard
+      </div>
+
+      <div class="topbar-actions">
+
+        <div class="topbar-search">
+          <input type="text" placeholder="Buscar métricas, reservas" />
+        </div>
+
+        <button class="topbar-btn-icon">Notificaciones</button>
+        <button class="topbar-btn-icon">Exportar</button>
+
+        <div class="topbar-avatar">M</div>
+
+      </div>
+
+    </header>
+
+    <!-- CONTENT -->
+    <main class="page-content">
+
+      <!-- HEADER -->
+      <div class="page-header">
+
+        <div class="page-header-left">
+
+          <div class="page-header-eyebrow">
+            Vista general
+          </div>
+
+          <h1 class="page-header-title">
+            Dashboard de Métricas
+          </h1>
+
+          <p class="page-header-subtitle">
+            Resumen operativo del sistema gastronómico VIDANTA
+          </p>
+
+        </div>
+
+        <div class="page-header-actions">
+
+          <button class="btn btn-ghost">Hoy</button>
+          <button class="btn btn-ghost">Semana</button>
+          <button class="btn btn-ghost">Mes</button>
+          <button class="btn btn-primary">Exportar</button>
+
+        </div>
+
+      </div>
+
+      <!-- ALERTA -->
+      <div class="alert alert-warning">
+
+        <div class="alert-content">
+          <div class="alert-title">
+            Stock bajo detectado
+          </div>
+
+          <div class="alert-text">
+            3 ingredientes requieren reposición inmediata.
+            <a href="stock.html">Ver inventario</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- MÉTRICAS -->
+      <div class="grid grid-4">
+
+        <div class="metric-card">
+          <div class="metric-label">Ingresos del día</div>
+          <div class="metric-value gold">$184.500</div>
+          <div class="metric-change up">+12.4% vs ayer</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-label">Reservas activas</div>
+          <div class="metric-value">34</div>
+          <div class="metric-change up">+8 últimas horas</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-label">Platos servidos</div>
+          <div class="metric-value">218</div>
+          <div class="metric-change up">+5.1% promedio</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-label">Alertas de stock</div>
+          <div class="metric-value danger">3</div>
+          <div class="metric-change down">Crítico</div>
+        </div>
+
+      </div>
+
+      <!-- GRÁFICO + RESERVAS -->
+      <div class="grid grid-3">
+
+        <div class="card col-span-2">
+
+          <div class="card-header">
+            <div>
+              <div class="card-title">Ingresos semanales</div>
+              <div class="card-subtitle">Comparativa por día</div>
+            </div>
+          </div>
+
+          <div class="chart-bars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar highlight"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+
+        </div>
+
+        <div class="card">
+
+          <div class="card-header">
+            <div class="card-title">Reservas de hoy</div>
+          </div>
+
+          <div class="list">
+            <div class="list-item">Mesa 4 — García</div>
+            <div class="list-item">Mesa 7 — Rodríguez</div>
+            <div class="list-item">Mesa 12 — Suárez</div>
+            <div class="list-item">Mesa 2 — Morales</div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- INFERIOR (SIMPLIFICADO) -->
+      <div class="grid grid-2">
+
+        <div class="card">
+          <div class="card-title">Top platos</div>
+          <div class="mini-list">
+            <div>Lomo a la piedra</div>
+            <div>Risotto de hongos</div>
+            <div>Ceviche tropical</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Ocupación</div>
+
+          <div class="big-number">78%</div>
+
+          <div class="progress">
+            <div class="progress-fill"></div>
+          </div>
+
+          <div class="stats-row">
+            <span>26 ocupadas</span>
+            <span>8 libres</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+</div>
+
+</body>
+</html>

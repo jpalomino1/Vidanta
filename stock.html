@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIDANTA — Control de Stock</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<div class="app-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-text">
+        <span class="sidebar-logo-name">VIDANTA</span>
+        <span class="sidebar-logo-sub">Gastronómico</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+
+      <span class="sidebar-section-label">Principal</span>
+
+      <a href="index.html" class="sidebar-nav-item">Dashboard</a>
+
+      <a href="stock.html" class="sidebar-nav-item active">
+        Control de Stock
+        <span class="nav-badge danger">3</span>
+      </a>
+
+      <a href="perfil.html" class="sidebar-nav-item">Perfil</a>
+      <a href="configuracion.html" class="sidebar-nav-item">Configuración</a>
+
+      <span class="sidebar-section-label">Operaciones</span>
+
+      <a href="calendario.html" class="sidebar-nav-item">Calendario</a>
+      <a href="reservas.html" class="sidebar-nav-item">Reservas</a>
+      <a href="historial.html" class="sidebar-nav-item">Historial</a>
+      <a href="catalogo.html" class="sidebar-nav-item">Catálogo</a>
+
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">M</div>
+        <div class="sidebar-user-info">
+          <div class="sidebar-user-name">Martín Echevarría</div>
+          <div class="sidebar-user-role">Gerente General</div>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main-wrapper">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+
+      <div class="topbar-breadcrumb">
+        <span>VIDANTA</span>
+        <span class="topbar-breadcrumb-sep">/</span>
+        <span>Stock</span>
+      </div>
+
+      <div class="topbar-title">Control de Stock</div>
+
+      <div class="topbar-actions">
+        <input class="topbar-search" type="text" placeholder="Buscar producto..." />
+        <button class="topbar-btn-icon">Notificaciones</button>
+        <button class="topbar-btn-icon">Exportar</button>
+        <div class="topbar-avatar">M</div>
+      </div>
+
+    </header>
+
+    <!-- CONTENT -->
+    <main class="page-content">
+
+      <!-- HEADER -->
+      <div class="page-header">
+        <div>
+          <div class="page-header-eyebrow">Inventario</div>
+          <h1 class="page-header-title">Control de stock</h1>
+          <p class="page-header-subtitle">Actualización en tiempo real</p>
+        </div>
+
+        <div class="page-header-actions">
+          <button class="btn btn-ghost">Importar</button>
+          <button class="btn btn-secondary">Pedido</button>
+          <button class="btn btn-primary">Agregar</button>
+        </div>
+      </div>
+
+      <!-- ALERTAS (solo 1 bloque simple) -->
+      <div class="card" style="margin-bottom:20px;">
+        <div class="alert-content">
+          <div class="alert-title">Alertas de stock</div>
+          <div class="alert-text">
+            3 productos críticos y 2 en bajo stock requieren atención.
+          </div>
+        </div>
+      </div>
+
+      <!-- TABLA -->
+      <div class="card">
+
+        <div class="table-container">
+          <table class="table">
+
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Stock</th>
+                <th>Mínimo</th>
+                <th>Proveedor</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td>Lomo vacuno</td>
+                <td>Carnes</td>
+                <td>2 kg</td>
+                <td>10 kg</td>
+                <td>Frigorífico Norte</td>
+                <td>Crítico</td>
+                <td>Pedir</td>
+              </tr>
+
+              <tr>
+                <td>Salmón rosado</td>
+                <td>Pescados</td>
+                <td>3 kg</td>
+                <td>8 kg</td>
+                <td>Pesquera del Sur</td>
+                <td>Bajo</td>
+                <td>Pedir</td>
+              </tr>
+
+              <tr>
+                <td>Aceite de oliva</td>
+                <td>Secos</td>
+                <td>1.5 L</td>
+                <td>10 L</td>
+                <td>Distribuidora Natura</td>
+                <td>Bajo</td>
+                <td>Pedir</td>
+              </tr>
+
+              <tr>
+                <td>Arroz arborio</td>
+                <td>Secos</td>
+                <td>14 kg</td>
+                <td>5 kg</td>
+                <td>Molinos Pampa</td>
+                <td>OK</td>
+                <td>—</td>
+              </tr>
+
+              <tr>
+                <td>Limón amarillo</td>
+                <td>Verduras</td>
+                <td>45 u</td>
+                <td>20 u</td>
+                <td>Verdulería Central</td>
+                <td>OK</td>
+                <td>—</td>
+              </tr>
+
+            </tbody>
+
+          </table>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+</div>
+
+</body>
+</html>

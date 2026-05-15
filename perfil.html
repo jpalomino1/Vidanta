@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIDANTA — Ficha de Detalle</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<div class="app-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-mark"></div>
+      <div class="sidebar-logo-text">
+        <span class="sidebar-logo-name">VIDANTA</span>
+        <span class="sidebar-logo-sub">Sistema Gastronómico</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+
+      <span class="sidebar-section-label">Principal</span>
+
+      <a href="index.html" class="sidebar-nav-item">Dashboard</a>
+
+      <a href="stock.html" class="sidebar-nav-item">
+        Control de Stock
+        <span class="nav-badge danger">3</span>
+      </a>
+
+      <a href="perfil.html" class="sidebar-nav-item active">Ficha de Detalle</a>
+
+      <a href="configuracion.html" class="sidebar-nav-item">Configuración</a>
+
+      <span class="sidebar-section-label">Operaciones</span>
+
+      <a href="calendario.html" class="sidebar-nav-item">Calendario</a>
+      <a href="reservas.html" class="sidebar-nav-item">Reservas</a>
+      <a href="historial.html" class="sidebar-nav-item">Historial</a>
+      <a href="catalogo.html" class="sidebar-nav-item">Catálogo</a>
+
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">M</div>
+        <div class="sidebar-user-info">
+          <div class="sidebar-user-name">Martín Echevarría</div>
+          <div class="sidebar-user-role">Gerente General</div>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main-wrapper">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <div class="topbar-breadcrumb">
+        <span>VIDANTA</span>
+        <span class="topbar-breadcrumb-sep">/</span>
+        <span>Clientes</span>
+        <span class="topbar-breadcrumb-sep">/</span>
+        <span>Ana Gómez</span>
+      </div>
+
+      <div class="topbar-title">Ficha de Cliente</div>
+
+      <div class="topbar-actions">
+        <button class="topbar-btn-icon">Notificaciones</button>
+        <button class="topbar-btn-icon">Imprimir</button>
+        <div class="topbar-avatar">M</div>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="page-content">
+
+      <!-- HEADER -->
+      <div class="page-header">
+        <div class="page-header-left">
+          <div class="page-header-eyebrow">Perfil de Cliente</div>
+          <h1 class="page-header-title">Ficha de Detalle</h1>
+          <p class="page-header-subtitle">Información completa del cliente</p>
+        </div>
+
+        <div class="page-header-actions">
+          <button class="btn btn-ghost">Volver</button>
+          <button class="btn btn-secondary">Contactar</button>
+          <button class="btn btn-primary">Editar</button>
+        </div>
+      </div>
+
+      <!-- GRID -->
+      <div class="grid" style="grid-template-columns: 340px 1fr; gap: 24px;">
+
+        <!-- LEFT -->
+        <div style="display:flex; flex-direction:column; gap:16px;">
+
+          <!-- PERFIL -->
+          <div class="card">
+
+            <div class="card-header">
+              <div class="card-title">Ana Gómez</div>
+            </div>
+
+            <div style="padding:16px;">
+              <div style="color:var(--text-muted); margin-bottom:12px;">
+                Cliente desde 2023
+              </div>
+
+              <div style="display:flex; flex-direction:column; gap:8px;">
+                <div>Email: ana.gomez@email.com</div>
+                <div>Tel: +54 11 4567-8901</div>
+                <div>Ubicación: Palermo</div>
+                <div>Cumpleaños: 15/04</div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div style="display:grid; grid-template-columns:repeat(3,1fr); text-align:center;">
+              <div>
+                <div class="metric-value">47</div>
+                <div class="metric-label">Visitas</div>
+              </div>
+              <div>
+                <div class="metric-value">4.9</div>
+                <div class="metric-label">Rating</div>
+              </div>
+              <div>
+                <div class="metric-value">$8.4K</div>
+                <div class="metric-label">Gasto</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- PREFERENCIAS -->
+          <div class="card">
+            <div class="card-title">Preferencias</div>
+
+            <div style="margin-top:10px; display:flex; flex-direction:column; gap:8px;">
+              <div>Dieta: Sin restricciones</div>
+              <div>Alergias: Mariscos</div>
+              <div>Mesa favorita: Mesa 4</div>
+              <div>Bebida: Malbec</div>
+              <div>Horario: 21:00 - 22:30</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div style="display:flex; flex-direction:column; gap:20px;">
+
+          <!-- PLATOS -->
+          <div class="card">
+            <div class="card-title">Platos más pedidos</div>
+
+            <div style="margin-top:10px; display:flex; flex-direction:column; gap:8px;">
+              <div>Lomo a la piedra</div>
+              <div>Risotto de hongos</div>
+              <div>Pulpo a la brasa</div>
+              <div>Crème brûlée</div>
+            </div>
+          </div>
+
+          <!-- HISTORIAL -->
+          <div class="card">
+            <div class="card-title">Últimas visitas</div>
+
+            <div class="table-container">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Fecha</th>
+                    <th>Mesa</th>
+                    <th>Consumo</th>
+                    <th>Estado</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>10/06</td>
+                    <td>Mesa 4</td>
+                    <td>$9.400</td>
+                    <td>OK</td>
+                  </tr>
+                  <tr>
+                    <td>02/06</td>
+                    <td>Mesa 4</td>
+                    <td>$18.200</td>
+                    <td>OK</td>
+                  </tr>
+                  <tr>
+                    <td>24/05</td>
+                    <td>Mesa 2</td>
+                    <td>$7.800</td>
+                    <td>OK</td>
+                  </tr>
+                </tbody>
+
+              </table>
+            </div>
+
+          </div>
+
+          <!-- RESUMEN -->
+          <div class="grid grid-3">
+
+            <div class="metric-card">
+              <div class="metric-value">$10.2K</div>
+              <div class="metric-label">Promedio</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-value">12</div>
+              <div class="metric-label">Visitas/mes</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-value">4.9</div>
+              <div class="metric-label">Satisfacción</div>
+            </div>
+
+          </div>
+
+          <!-- PRÓXIMA RESERVA -->
+          <div class="card">
+            <div class="card-title">Próxima reserva</div>
+
+            <div style="margin-top:10px;">
+              <div>Viernes 20 - 21:00 hs</div>
+              <div>Mesa 4 - Terraza</div>
+              <div>4 personas</div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+</div>
+
+</body>
+</html>
