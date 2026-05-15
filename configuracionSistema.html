@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIDANTA — Configuración</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-layout">
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">🌿</div>
+      <div class="sidebar-logo-text">
+        <span class="sidebar-logo-name">VIDANTA</span>
+        <span class="sidebar-logo-sub">Gastronómico</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <span class="sidebar-section-label">Principal</span>
+
+      <a href="index.html" class="sidebar-nav-item">
+        <span class="nav-icon">📊</span>
+        Dashboard
+      </a>
+      <a href="stock.html" class="sidebar-nav-item">
+        <span class="nav-icon">📦</span>
+        Control de Stock
+        <span class="nav-badge danger">3</span>
+      </a>
+      <a href="perfil.html" class="sidebar-nav-item">
+        <span class="nav-icon">👤</span>
+        Ficha de Detalle
+      </a>
+      <a href="configuracion.html" class="sidebar-nav-item active">
+        <span class="nav-icon">⚙️</span>
+        Configuración
+      </a>
+
+      <span class="sidebar-section-label">Operaciones</span>
+
+      <a href="calendario.html" class="sidebar-nav-item">
+        <span class="nav-icon">📅</span>
+        Calendario
+        <span class="nav-badge">5</span>
+      </a>
+      <a href="reservas.html" class="sidebar-nav-item">
+        <span class="nav-icon">🪑</span>
+        Reservas
+      </a>
+      <a href="historial.html" class="sidebar-nav-item">
+        <span class="nav-icon">📋</span>
+        Historial
+      </a>
+      <a href="catalogo.html" class="sidebar-nav-item">
+        <span class="nav-icon">🍽️</span>
+        Catálogo
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">👨‍🍳</div>
+        <div class="sidebar-user-info">
+          <div class="sidebar-user-name">Martín Echevarría</div>
+          <div class="sidebar-user-role">Gerente General</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===================== MAIN ===================== -->
+  <div class="main-wrapper">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <div class="topbar-breadcrumb">
+        <span>VIDANTA</span>
+        <span class="topbar-breadcrumb-sep">›</span>
+        <span>Configuración</span>
+      </div>
+      <span class="topbar-title">Configuración</span>
+      <div class="topbar-spacer"></div>
+      <div class="topbar-actions">
+        <button class="topbar-btn-icon" data-tooltip="Notificaciones">🔔</button>
+        <div class="topbar-avatar">👨‍🍳</div>
+      </div>
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <main class="page-content">
+
+      <div class="page-header animate-fade">
+        <div class="page-header-left">
+          <div class="page-header-eyebrow">Sistema</div>
+          <h1 class="page-header-title">Configuración</h1>
+          <p class="page-header-subtitle">Administrá las preferencias y parámetros del sistema VIDANTA</p>
+        </div>
+        <div class="page-header-actions">
+          <button class="btn btn-ghost">↩️ Restablecer</button>
+          <button class="btn btn-primary">💾 Guardar cambios</button>
+        </div>
+      </div>
+
+      <!-- Layout de configuración: nav lateral + contenido -->
+      <div style="display:grid; grid-template-columns:240px 1fr; gap:24px; align-items:start;" class="animate-fade delay-1">
+
+        <!-- Nav de secciones -->
+        <div class="card" style="padding:12px;">
+          <div class="settings-nav">
+            <div class="settings-nav-item active">
+              <span>👤</span> Perfil del negocio
+            </div>
+            <div class="settings-nav-item">
+              <span>🔔</span> Notificaciones
+            </div>
+            <div class="settings-nav-item">
+              <span>🎨</span> Apariencia
+            </div>
+            <div class="settings-nav-item">
+              <span>🪑</span> Configuración de mesas
+            </div>
+            <div class="settings-nav-item">
+              <span>📦</span> Umbrales de stock
+            </div>
+            <div class="settings-nav-item">
+              <span>🕐</span> Horarios y turnos
+            </div>
+            <div class="settings-nav-item">
+              <span>👥</span> Usuarios y roles
+            </div>
+            <div class="settings-nav-item">
+              <span>🔗</span> Integraciones
+            </div>
+            <div class="settings-nav-item">
+              <span>💾</span> Respaldo de datos
+            </div>
+            <div class="divider"></div>
+            <div class="settings-nav-item" style="color:var(--danger);">
+              <span>🗑️</span> Zona de riesgo
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel de contenido -->
+        <div style="display:flex; flex-direction:column; gap:20px;">
+
+          <!-- Perfil del negocio -->
+          <div class="card animate-fade delay-1">
+            <div class="card-header">
+              <div>
+                <div class="card-title">🏢 Perfil del Negocio</div>
+                <div class="card-subtitle">Información principal del restaurante</div>
+              </div>
+            </div>
+
+            <div class="grid grid-2" style="gap:16px;">
+              <div class="form-group" style="margin-bottom:0;">
+                <label class="form-label">Nombre del restaurante</label>
+                <input class="form-control" type="text" value="VIDANTA Gastronómico" />
+              </div>
+              <div class="form-group" style="margin-bottom:0;">
+                <label class="form-label">Nombre comercial</label>
+                <input class="form-control" type="text" value="VIDANTA" />
+              </div>
+              <div class="form-group" style="margin-bottom:0;">
+                <label class="form-label">CUIT / RUT</label>
+                <input class="form-control" type="text" value="30-71234567-4" />
+              </div>
+              <div class="form-group" style="margin-bottom:0;">
+                <label class="form-label">Teléfono</label>
+                <input class="form-control" type="tel" value="+54 11 4800-0000" />
+              </div>
+              <div class="form-group" style="margin-bottom:0; grid-column:span 2;">
+                <label class="form-label">Dirección</label>
+                <input class="form-control" type="text" value="Av. del Libertador 3400, Núñez, Buenos Aires" />
+              </div>
+              <div class="form-group" style="margin-bottom:0;">
+                <label class="form-label">Correo de contacto</label>
+                <input class="form-control" type="email" value="reservas@vidanta.com.ar" />
+              </div>
+              <div class="form-group" style="margin-bottom:0;">
+                <label class="form-label">Sitio web</label>
+                <input class="form-control" type="url" value="https://vidanta.com.ar" />
+              </div>
+              <div class="form-group" style="margin-bottom:0;">
+                <label class="form-label">Moneda</label>
+                <select class="form-control">
+                  <option selected>ARS — Peso Argentino</option>
+                  <option>USD — Dólar</option>
+                  <option>EUR — Euro</option>
+                </select>
+              </div>
+              <div class="form-group" style="margin-bottom:0;">
+                <label class="form-label">Zona horaria</label>
+                <select class="form-control">
+                  <option selected>America/Argentina/Buenos_Aires (UTC-3)</option>
+                  <option>America/Santiago</option>
+                  <option>America/Montevideo</option>
+                </select>
+              </div>
+              <div class="form-group" style="margin-bottom:0; grid-column:span 2;">
+                <label class="form-label">Descripción del restaurante</label>
+                <textarea class="form-control" rows="3">Restaurante gastronómico de autor con inspiración tropical. Experiencias únicas en un entorno de lujo natural moderno.</textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notificaciones -->
+          <div class="card animate-fade delay-2">
+            <div class="card-header">
+              <div>
+                <div class="card-title">🔔 Notificaciones</div>
+                <div class="card-subtitle">Configurá qué alertas recibir y por qué canal</div>
+              </div>
+            </div>
+
+            <div class="settings-row">
+              <div class="settings-row-left">
+                <div class="settings-row-label">Alertas de stock crítico</div>
+                <div class="settings-row-desc">Notificación cuando un ítem baje del mínimo configurado</div>
+              </div>
+              <div class="toggle-switch">
+                <div class="toggle-track on"><div class="toggle-thumb"></div></div>
+                <span style="font-size:0.82rem; color:var(--text-secondary);">Activo</span>
+              </div>
+            </div>
+
+            <div class="settings-row">
+              <div class="settings-row-left">
+                <div class="settings-row-label">Confirmación de reservas</div>
+                <div class="settings-row-desc">Email automático al cliente al confirmar una reserva</div>
+              </div>
+              <div class="toggle-switch">
+                <div class="toggle-track on"><div class="toggle-thumb"></div></div>
+                <span style="font-size:0.82rem; color:var(--text-secondary);">Activo</span>
+              </div>
+            </div>
+
+            <div class="settings-row">
+              <div class="settings-row-left">
+                <div class="settings-row-label">Recordatorio de eventos</div>
+                <div class="settings-row-desc">Alerta 24 hs antes de un evento en calendario</div>
+              </div>
+              <div class="toggle-switch">
+                <div class="toggle-track on"><div class="toggle-thumb"></div></div>
+                <span style="font-size:0.82rem; color:var(--text-secondary);">Activo</span>
+              </div>
+            </div>
+
+            <div class="settings-row">
+              <div class="settings-row-left">
+                <div class="settings-row-label">Resumen diario por email</div>
+                <div class="settings-row-desc">Reporte automático de métricas al cierre del día</div>
+              </div>
+              <div class="toggle-switch">
+                <div class="toggle-track"><div class="toggle-thumb"></div></div>
+                <span style="font-size:0.82rem; color:var(--text-muted);">Inactivo</span>
+              </div>
+            </div>
+
+            <div class="settings-row">
+              <div class="settings-row-left">
+                <div class="settings-row-label">Alertas de cancelaciones</div>
+                <div class="settings-row-desc">Notificación cuando se cancele una reserva</div>
+              </div>
+              <div class="toggle-switch">
+                <div class="toggle-track on"><div class="toggle-thumb"></div></div>
+                <span style="font-size:0.82rem; color:var(--text-secondary);">Activo</span>
+              </div>
+            </div>
+
+            <div class="settings-row">
+              <div class="settings-row-left">
+                <div class="settings-row-label">Sonidos del sistema</div>
+                <div class="settings-row-desc">Efectos de audio para alertas y acciones</div>
+              </div>
+              <div class="toggle-switch">
+                <div class="toggle-track"><div class="toggle-thumb"></div></div>
+                <span style="font-size:0.82rem; color:var(--text-muted);">Inactivo</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Configuración de mesas -->
+          <div class="card animate-fade delay-3">
+            <div class="card-header">
+              <div>
+                <div class="card-title">🪑 Configuración de Mesas</div>
+                <div class="card-subtitle">Parámetros del salón y capacidad</div>
+              </div>
+              <button class="btn btn-secondary btn-sm">+ Agregar zona</button>
+            </div>
+
+            <div class="grid grid-3" style="gap:16px; margin-bottom:20px;">
+              <div class="form-group" style="margin-bottom:0;">
+                <label class="form-label">Total de mesas</label>
+                <input class="form-control" type="number" value="34" />
+              </div>
+              <div class="form-group" style="margin-bottom:0;">
+                <label class="form-label">Capacidad máxima</label>
+                <input class="form-control" type="number" value="120" />
+              </div>
+              <div class="form-group" style="margin-bottom:0;">
+                <label class="form-label">Tiempo de rotación (min)</label>
+                <input class="form-control" type="number" value="90" />
+              </div>
+            </div>
+
+            <div class="section-title">Zonas del salón</div>
+
+            <div style="display:flex; flex-direction:column; gap:10px;">
+
+              <div style="display:flex; align-items:center; gap:16px; padding:14px 16px; background:var(--bg-secondary); border-radius:var(--radius-sm); border:1px solid var(--border-soft);">
+                <span style="font-size:20px;">🌿</span>
+                <div style="flex:1;">
+                  <div style="font-size:0.875rem; font-weight:600; color:var(--text-main);">Terraza jardín</div>
+                  <div style="font-size:0.75rem; color:var(--text-muted);">12 mesas · 48 cubiertos</div>
+                </div>
+                <span class="badge badge-green">Activa</span>
+                <button class="btn btn-ghost btn-sm">✏️</button>
+              </div>
+
+              <div style="display:flex; align-items:center; gap:16px; padding:14px 16px; background:var(--bg-secondary); border-radius:var(--radius-sm); border:1px solid var(--border-soft);">
+                <span style="font-size:20px;">🏛️</span>
+                <div style="flex:1;">
+                  <div style="font-size:0.875rem; font-weight:600; color:var(--text-main);">Salón interior</div>
+                  <div style="font-size:0.75rem; color:var(--text-muted);">16 mesas · 56 cubiertos</div>
+                </div>
+                <span class="badge badge-green">Activa</span>
+                <button class="btn btn-ghost btn-sm">✏️</button>
+              </div>
+
+              <div style="display:flex; align-items:center; gap:16px; padding:14px 16px; background:var(--bg-secondary); border-radius:var(--radius-sm); border:1px solid var(--border-soft);">
+                <span style="font-size:20px;">🎭</span>
+                <div style="flex:1;">
+                  <div style="font-size:0.875rem; font-weight:600; color:var(--text-main);">Salón privado VIP</div>
+                  <div style="font-size:0.75rem; color:var(--text-muted);">6 mesas · 24 cubiertos</div>
+                </div>
+                <span class="badge badge-orange">Solo reservas</span>
+                <button class="btn btn-ghost btn-sm">✏️</button>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Horarios y turnos -->
+          <div class="card animate-fade delay-3">
+            <div class="card-header">
+              <div>
+                <div class="card-title">🕐 Horarios y Turnos</div>
+                <div class="card-subtitle">Configurá los servicios y días de atención</div>
+              </div>
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:8px;">
+
+              <div style="display:grid; grid-template-columns:120px 1fr 1fr 80px 80px; gap:12px; align-items:center; padding:10px 14px; background:var(--bg-secondary); border-radius:var(--radius-sm); font-size:0.82rem;">
+                <span style="color:var(--text-secondary); font-weight:500;">Lun – Vie</span>
+                <select class="form-control" style="padding:6px 12px; font-size:0.82rem;">
+                  <option>12:00</option><option>13:00</option>
+                </select>
+                <select class="form-control" style="padding:6px 12px; font-size:0.82rem;">
+                  <option>00:00</option><option>01:00</option>
+                </select>
+                <span class="badge badge-green" style="justify-self:center;">Almuerzo</span>
+                <div class="toggle-switch" style="justify-self:end;">
+                  <div class="toggle-track on" style="width:34px; height:18px;"><div class="toggle-thumb" style="width:14px; height:14px;"></div></div>
+                </div>
+              </div>
+
+              <div style="display:grid; grid-template-columns:120px 1fr 1fr 80px 80px; gap:12px; align-items:center; padding:10px 14px; background:var(--bg-secondary); border-radius:var(--radius-sm); font-size:0.82rem;">
+                <span style="color:var(--text-secondary); font-weight:500;">Lun – Vie</span>
+                <select class="form-control" style="padding:6px 12px; font-size:0.82rem;">
+                  <option>20:00</option><option>21:00</option>
+                </select>
+                <select class="form-control" style="padding:6px 12px; font-size:0.82rem;">
+                  <option>00:30</option><option>01:30</option>
+                </select>
+                <span class="badge badge-gold" style="justify-self:center;">Cena</span>
+                <div class="toggle-switch" style="justify-self:end;">
+                  <div class="toggle-track on" style="width:34px; height:18px;"><div class="toggle-thumb" style="width:14px; height:14px;"></div></div>
+                </div>
+              </div>
+
+              <div style="display:grid; grid-template-columns:120px 1fr 1fr 80px 80px; gap:12px; align-items:center; padding:10px 14px; background:var(--bg-secondary); border-radius:var(--radius-sm); font-size:0.82rem;">
+                <span style="color:var(--text-secondary); font-weight:500;">Sáb – Dom</span>
+                <select class="form-control" style="padding:6px 12px; font-size:0.82rem;">
+                  <option>11:00</option><option>12:00</option>
+                </select>
+                <select class="form-control" style="padding:6px 12px; font-size:0.82rem;">
+                  <option>02:00</option><option>03:00</option>
+                </select>
+                <span class="badge badge-blue" style="justify-self:center;">Full</span>
+                <div class="toggle-switch" style="justify-self:end;">
+                  <div class="toggle-track on" style="width:34px; height:18px;"><div class="toggle-thumb" style="width:14px; height:14px;"></div></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Usuarios y roles -->
+          <div class="card animate-fade delay-4">
+            <div class="card-header">
+              <div>
+                <div class="card-title">👥 Usuarios del Sistema</div>
+                <div class="card-subtitle">Personal con acceso a VIDANTA</div>
+              </div>
+              <button class="btn btn-secondary btn-sm">+ Invitar usuario</button>
+            </div>
+
+            <div class="table-container">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Usuario</th>
+                    <th>Email</th>
+                    <th>Rol</th>
+                    <th>Último acceso</th>
+                    <th>Estado</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div style="display:flex; align-items:center; gap:10px;">
+                        <div class="table-avatar">👨‍🍳</div>
+                        <span>Martín Echevarría</span>
+                      </div>
+                    </td>
+                    <td>martin@vidanta.com.ar</td>
+                    <td><span class="badge badge-gold">Gerente</span></td>
+                    <td style="color:var(--text-muted);">Hoy, 18:42</td>
+                    <td><span class="status-dot online"></span></td>
+                    <td><button class="btn btn-ghost btn-sm">⚙️</button></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div style="display:flex; align-items:center; gap:10px;">
+                        <div class="table-avatar">👩‍🍳</div>
+                        <span>Lucía Paredes</span>
+                      </div>
+                    </td>
+                    <td>lucia@vidanta.com.ar</td>
+                    <td><span class="badge badge-green">Chef Principal</span></td>
+                    <td style="color:var(--text-muted);">Hoy, 16:10</td>
+                    <td><span class="status-dot online"></span></td>
+                    <td><button class="btn btn-ghost btn-sm">⚙️</button></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div style="display:flex; align-items:center; gap:10px;">
+                        <div class="table-avatar">🧑</div>
+                        <span>Rodrigo Salinas</span>
+                      </div>
+                    </td>
+                    <td>rodrigo@vidanta.com.ar</td>
+                    <td><span class="badge badge-blue">Sommelier</span></td>
+                    <td style="color:var(--text-muted);">Ayer, 23:15</td>
+                    <td><span class="status-dot busy"></span></td>
+                    <td><button class="btn btn-ghost btn-sm">⚙️</button></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div style="display:flex; align-items:center; gap:10px;">
+                        <div class="table-avatar">👩</div>
+                        <span>Valentina Cruz</span>
+                      </div>
+                    </td>
+                    <td>valentina@vidanta.com.ar</td>
+                    <td><span class="badge badge-muted">Recepción</span></td>
+                    <td style="color:var(--text-muted);">12/06</td>
+                    <td><span class="status-dot offline"></span></td>
+                    <td><button class="btn btn-ghost btn-sm">⚙️</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Zona de peligro -->
+          <div class="card animate-fade delay-5" style="border-color:rgba(217,83,79,0.25); background:rgba(217,83,79,0.04);">
+            <div class="card-header">
+              <div>
+                <div class="card-title" style="color:var(--danger);">⚠️ Zona de Riesgo</div>
+                <div class="card-subtitle">Acciones irreversibles sobre el sistema</div>
+              </div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:12px;">
+              <div class="settings-row">
+                <div class="settings-row-left">
+                  <div class="settings-row-label">Limpiar historial de movimientos</div>
+                  <div class="settings-row-desc">Elimina todos los registros anteriores a 6 meses</div>
+                </div>
+                <button class="btn btn-ghost btn-sm" style="flex-shrink:0; color:var(--warning);">Limpiar</button>
+              </div>
+              <div class="settings-row">
+                <div class="settings-row-left">
+                  <div class="settings-row-label">Restablecer configuración</div>
+                  <div class="settings-row-desc">Vuelve todos los parámetros a sus valores por defecto</div>
+                </div>
+                <button class="btn btn-ghost btn-sm" style="flex-shrink:0; color:var(--danger);">Restablecer</button>
+              </div>
+              <div class="settings-row" style="border-bottom:none;">
+                <div class="settings-row-left">
+                  <div class="settings-row-label">Eliminar todos los datos</div>
+                  <div class="settings-row-desc">Borra de forma permanente todos los datos del sistema. Esta acción no puede deshacerse.</div>
+                </div>
+                <button class="btn btn-danger btn-sm" style="flex-shrink:0;">Eliminar todo</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botón guardar -->
+          <div style="display:flex; justify-content:flex-end; gap:12px; padding-bottom:16px;" class="animate-fade delay-5">
+            <button class="btn btn-ghost">Cancelar</button>
+            <button class="btn btn-primary btn-lg">💾 Guardar todos los cambios</button>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+</body>
+</html>
