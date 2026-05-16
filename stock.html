@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VIDANTA — Control de Stock</title>
+  <title>VIDANTA — Stock</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -14,34 +14,27 @@
   <!-- SIDEBAR -->
   <aside class="sidebar">
 
-     <div class="sidebar-logo">
+    <div class="sidebar-logo">
       <div class="sidebar-logo-text">
-        <span class="sidebar-logo-name">VIDANTA</span>
-        <span class="sidebar-logo-sub">Gastronómico</span>
+        <div class="sidebar-logo-name">VIDANTA</div>
+        <div class="sidebar-logo-sub">Gastronómico</div>
       </div>
     </div>
-
 
     <nav class="sidebar-nav">
 
       <span class="sidebar-section-label">Principal</span>
 
       <a href="index.html" class="sidebar-nav-item">Dashboard</a>
-
-      <a href="stock.html" class="sidebar-nav-item active">
-        Control de Stock
-        <span class="nav-badge danger">3</span>
-      </a>
-
+      <a href="stock.html" class="sidebar-nav-item active">Stock</a>
       <a href="perfil.html" class="sidebar-nav-item">Perfil</a>
-      <a href="configuracion.html" class="sidebar-nav-item">Configuración</a>
+      <a href="configuracion.html" class="sidebar-nav-item">Config</a>
 
       <span class="sidebar-section-label">Operaciones</span>
 
       <a href="calendario.html" class="sidebar-nav-item">Calendario</a>
       <a href="reservas.html" class="sidebar-nav-item">Reservas</a>
       <a href="historial.html" class="sidebar-nav-item">Historial</a>
-      <a href="catalogo.html" class="sidebar-nav-item">Catálogo</a>
 
     </nav>
 
@@ -50,7 +43,7 @@
         <div class="sidebar-avatar">M</div>
         <div class="sidebar-user-info">
           <div class="sidebar-user-name">Martín Echevarría</div>
-          <div class="sidebar-user-role">Gerente General</div>
+          <div class="sidebar-user-role">Gerente</div>
         </div>
       </div>
     </div>
@@ -60,22 +53,21 @@
   <!-- MAIN -->
   <div class="main-wrapper">
 
-    <!-- TOPBAR -->
+    <!-- TOPBAR (simplificado) -->
     <header class="topbar">
 
       <div class="topbar-breadcrumb">
-        <span>VIDANTA</span>
-        <span class="topbar-breadcrumb-sep">/</span>
-        <span>Stock</span>
+        VIDANTA / Stock
       </div>
 
-      <div class="topbar-title">Control de Stock</div>
+      <div class="topbar-title">
+        Control de Stock
+      </div>
 
       <div class="topbar-actions">
-        <input class="topbar-search" type="text" placeholder="Buscar producto..." />
-        <button class="topbar-btn-icon">Notificaciones</button>
-        <button class="topbar-btn-icon">Exportar</button>
-        <div class="topbar-avatar">M</div>
+        <input class="topbar-search" placeholder="Buscar..." />
+        <div class="topbar-btn-icon">🔔</div>
+
       </div>
 
     </header>
@@ -85,10 +77,11 @@
 
       <!-- HEADER -->
       <div class="page-header">
+
         <div>
           <div class="page-header-eyebrow">Inventario</div>
-          <h1 class="page-header-title">Control de stock</h1>
-          <p class="page-header-subtitle">Actualización en tiempo real</p>
+          <h1 class="page-header-title">Stock</h1>
+          <p class="page-header-subtitle">Control en tiempo real</p>
         </div>
 
         <div class="page-header-actions">
@@ -96,15 +89,14 @@
           <button class="btn btn-secondary">Pedido</button>
           <button class="btn btn-primary">Agregar</button>
         </div>
+
       </div>
 
-      <!-- ALERTAS (solo 1 bloque simple) -->
-      <div class="card" style="margin-bottom:20px;">
-        <div class="alert-content">
-          <div class="alert-title">Alertas de stock</div>
-          <div class="alert-text">
-            3 productos críticos y 2 en bajo stock requieren atención.
-          </div>
+      <!-- ALERTA (simplificada) -->
+      <div class="card">
+        <div class="alert-title">Alertas de stock</div>
+        <div class="alert-text">
+          3 productos críticos requieren atención.
         </div>
       </div>
 
@@ -112,6 +104,7 @@
       <div class="card">
 
         <div class="table-container">
+
           <table class="table">
 
             <thead>
@@ -119,10 +112,10 @@
                 <th>Producto</th>
                 <th>Categoría</th>
                 <th>Stock</th>
-                <th>Mínimo</th>
+                <th>Mín</th>
                 <th>Proveedor</th>
                 <th>Estado</th>
-                <th>Acciones</th>
+                <th>Acción</th>
               </tr>
             </thead>
 
@@ -139,27 +132,27 @@
               </tr>
 
               <tr>
-                <td>Salmón rosado</td>
+                <td>Salmón</td>
                 <td>Pescados</td>
                 <td>3 kg</td>
                 <td>8 kg</td>
-                <td>Pesquera del Sur</td>
+                <td>Pesquera Sur</td>
                 <td>Bajo</td>
                 <td>Pedir</td>
               </tr>
 
               <tr>
-                <td>Aceite de oliva</td>
+                <td>Aceite oliva</td>
                 <td>Secos</td>
                 <td>1.5 L</td>
                 <td>10 L</td>
-                <td>Distribuidora Natura</td>
+                <td>Natura</td>
                 <td>Bajo</td>
                 <td>Pedir</td>
               </tr>
 
               <tr>
-                <td>Arroz arborio</td>
+                <td>Arroz</td>
                 <td>Secos</td>
                 <td>14 kg</td>
                 <td>5 kg</td>
@@ -169,11 +162,11 @@
               </tr>
 
               <tr>
-                <td>Limón amarillo</td>
+                <td>Limón</td>
                 <td>Verduras</td>
                 <td>45 u</td>
                 <td>20 u</td>
-                <td>Verdulería Central</td>
+                <td>Central</td>
                 <td>OK</td>
                 <td>—</td>
               </tr>
@@ -181,11 +174,13 @@
             </tbody>
 
           </table>
+
         </div>
 
       </div>
 
     </main>
+
   </div>
 
 </div>

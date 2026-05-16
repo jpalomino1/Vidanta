@@ -1,49 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
 
 :root {
---bg-main: #0d141a;
---bg-secondary: #162029;
---card-bg: #1b2834;
---card-hover: #1f2f3e;
+  --bg-main: #f7f5f2;          /* fondo principal muy claro */
+  --bg-secondary: #eee9e4;     /* paneles ligeramente más oscuros */
+  --card-bg: #ffffff;           /* cards */
+  --card-hover: #f5f3f0;        /* hover cards */
 
---wood: #9c6b3f;
---gold: #d6a66d;
---gold-light: #e8c08a;
---gold-glow: rgba(214, 166, 109, 0.18);
+  --wood: #7a5535;              /* marrón cálido principal */
+  --wood-light: #b0896c;        /* marrón claro para acentos */
+  --gold: #b08a5a;              /* dorado apagado */
+  --gold-light: #c9a873;
+  --gold-glow: rgba(176, 138, 90, 0.15);
 
---green-dark: #20392d;
---green-soft: #3f6b53;
---green-glow: rgba(63, 107, 83, 0.25);
+  --text-main: #68685c;         /* texto oscuro para contraste */
+  --text-secondary: #5a5448;    /* gris/marrón suave */
+  --text-muted: #7a6f63;        /* marrón grisáceo */
 
---text-main: #f5f5f5;
---text-secondary: #b8c2cc;
---text-muted: #6e8090;
+  --border-soft: rgba(0, 0, 0, 0.05);
+  --border-gold: rgba(176, 138, 90, 0.25);
 
---border-soft: rgba(255, 255, 255, 0.07);
---border-gold: rgba(214, 166, 109, 0.3);
---border-green: rgba(63, 107, 83, 0.4);
+  --shadow-dark: rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 22px rgba(176, 138, 90, 0.08);
 
---shadow-dark: rgba(0, 0, 0, 0.45);
---shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
---shadow-glow: 0 0 24px rgba(214, 166, 109, 0.15);
+  --success: #8fbf8f;
+  --danger: #c45c55;
+  --warning: #d6a15a;
+  --info: #8fbfd6;
 
---success: #4caf50;
---danger: #d9534f;
---warning: #ffb347;
---info: #4a9ebb;
+  --sidebar-w: 260px;
+  --sidebar-collapsed: 72px;
+  --header-h: 68px;
 
---sidebar-w: 260px;
---sidebar-collapsed: 72px;
---header-h: 68px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
 
---radius-sm: 8px;
---radius-md: 14px;
---radius-lg: 20px;
---radius-xl: 28px;
-
---transition: all 0.3s ease;
+  --transition: all 0.3s ease;
 }
-
 *,
 *::before,
 *::after {
